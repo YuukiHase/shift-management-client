@@ -288,7 +288,7 @@ export const actCreateShifts = (newShifts, selectedDateOnManangeShift, selectedD
                     // Turn off loading modal.
                     dispatch(actLoadingModal(false));
                     // Show error.
-                    dispatch(actChangeErrorMessageOnAddShift(res.data));
+                    dispatch(actChangeErrorMessageOnAddShift('Add fail!!!'));
                     dispatch(actOpenSnackBarOnAddShift(true));
                 }
             });
