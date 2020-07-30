@@ -4,7 +4,7 @@ import auth from '../../auth';
 import { Redirect } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import { styles } from './styles';
-import avatar from '../../static/staff.png';
+import avatar from '../../assets/images/staff.png';
 import { connect } from 'react-redux';
 import { actLogin, actLoginSuccess } from '../../actions';
 import { CircularProgress, Button } from '@material-ui/core';

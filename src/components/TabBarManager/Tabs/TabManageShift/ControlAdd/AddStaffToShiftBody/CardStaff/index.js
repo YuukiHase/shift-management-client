@@ -14,7 +14,7 @@ import Avatar from '@material-ui/core/Avatar';
 import AddAlertIcon from '@material-ui/icons/AddAlert';
 import Box from '@material-ui/core/Box';
 import { Card, CardHeader, CardContent } from '@material-ui/core';
-import avatar from '../../../../../../../static/staff.png';
+import avatar from '../../../../../../../assets/images/staff.png';
 
 CardStaff.propTypes = {
     title: PropTypes.string,
