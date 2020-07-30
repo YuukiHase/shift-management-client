@@ -21,8 +21,8 @@ import {
     actChangeSlotOnAddShift,
     actChangeStartTimeOnAddShift,
     actChangeFinishTimeOnAddShift
-} from '../../../../../../../actions';
-import { bonusRates } from '../../../../../../../constants/BonusRate';
+} from 'actions';
+import { bonusRates } from 'constants/BonusRate';
 
 ShiftItem.propTypes = {
     index: PropTypes.number

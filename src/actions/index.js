@@ -288,7 +288,12 @@ export const actCreateShifts = (newShifts, selectedDateOnManangeShift, selectedD
                     // Turn off loading modal.
                     dispatch(actLoadingModal(false));
                     // Show error.
-                    dispatch(actChangeErrorMessageOnAddShift('Add fail!!!'));
+                    if (res.data === 'Schedule is exist') {
+                        dispatch(actChangeErrorMessageOnAddShift('Date was exist'));
+                    } else {
+
+                        dispatch(actChangeErrorMessageOnAddShift('Add fail!!!'));
+                    }
                     dispatch(actOpenSnackBarOnAddShift(true));
                 }
             });

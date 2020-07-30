@@ -5,7 +5,7 @@ import { styles } from './styles';
 import { DatePicker } from '@material-ui/pickers';
 import ShiftItem from './ShiftItem';
 import AmountShift from './AmountShift';
-import { actChangeSelectedDateOnAddShift, actChangeAmountShiftOnAddShift } from '../../../../../../actions';
+import { actChangeSelectedDateOnAddShift, actChangeAmountShiftOnAddShift } from 'actions';
 
 const useStyles = makeStyles(styles);
 

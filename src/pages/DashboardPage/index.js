@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import TabBarManager from '../../components/TabBarManager';
-import TabBarStaff from '../../components/TabBarStaff';
+import TabBarManager from 'components/TabBarManager';
+import TabBarStaff from 'components/TabBarStaff';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
-import NotFoundPage from '../NotFoundPage';
+import NotFoundPage from 'pages/NotFoundPage';
 
 export default function DashboardPage(props) {
     const match = useRouteMatch();

@@ -13,12 +13,12 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import TablePaginationActions from '../../../../TablePaginationActions';
 import Typography from '@material-ui/core/Typography';
-import { actTakeAttendance, actLoadingModal, actLoadListStaffsOnShift } from '../../../../../actions';
-import * as callAPI from '../../../../../utils/callAPI';
+import { actTakeAttendance, actLoadingModal, actLoadListStaffsOnShift } from 'actions';
+import * as callAPI from 'utils/callAPI';
 import Button from '@material-ui/core/Button';
 import CheckIcon from '@material-ui/icons/Check';
-import { formatCurrency } from '../../../../../utils/utils';
-import { DOMAIN } from '../../../../../constants/DomainAPI';
+import { formatCurrency } from 'utils/utils';
+import { DOMAIN } from 'constants/DomainAPI';
 
 const useStyles = makeStyles(styles);
 

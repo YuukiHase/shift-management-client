@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { styles } from './styles';
 import { TextField, MenuItem } from '@material-ui/core';
-import { actChangeAmountShiftOnAddShift } from '../../../../../../../actions';
-import { amountShifts } from '../../../../../../../constants/AmountShifts';
+import { actChangeAmountShiftOnAddShift } from 'actions';
+import { amountShifts } from 'constants/AmountShifts';
 
 const useStyles = makeStyles(styles);
 

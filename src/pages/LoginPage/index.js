@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import auth from '../../auth';
+import auth from 'auth';
 import { Redirect } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import { styles } from './styles';
-import avatar from '../../assets/images/staff.png';
+import avatar from 'assets/images/staff.png';
+import backgroundOne from 'assets/images/bg-01.png';
+import backgroundTwo from 'assets/images/bg-02.png';
 import { connect } from 'react-redux';
-import { actLogin, actLoginSuccess } from '../../actions';
+import { actLogin, actLoginSuccess } from 'actions';
 import { CircularProgress, Button } from '@material-ui/core';
-import backgroundOne from '../../assets/images/bg-01.png';
-import backgroundTwo from '../../assets/images/bg-02.png';
 
 class LoginPage extends React.Component {
     constructor(props) {
@@ -37,10 +37,13 @@ class LoginPage extends React.Component {
         this.props.onLogin(username, password);
     };
 
-    onKeyDown = (event) => {
+    onKeyDownEnter = (event) => {
         if (event.keyCode === 13) {
             this.login();
         }
+    };
+
+    onKeyDownOther = (event) => {
     };
 
     componentDidMount() {
@@ -61,11 +64,11 @@ class LoginPage extends React.Component {
                 <div className='login'>
                     <img src={avatar} alt='Avatar' className='avatar' />
                     <h2>Log In</h2>
-                    <div>
+                    <form>
                         <p>Email address</p>
-                        <input type='text' name='username' placeholder='Enter Email' onChange={this.onChangeUsername} onKeyDown={(loadingLogin === false) ? this.onKeyDown : ''} />
+                        <input type='text' name='username' placeholder='Enter Email' onChange={this.onChangeUsername} onKeyDown={(loadingLogin === false) ? this.onKeyDownEnter : this.onKeyDownOther} />
                         <p>Password</p>
-                        <input type='password' name='password' placeholder='••••••••' autoComplete='on' onChange={this.onChangePassword} onKeyDown={(loadingLogin === false) ? this.onKeyDown : ''} />
+                        <input type='password' name='password' placeholder='••••••••' autoComplete='on' onChange={this.onChangePassword} onKeyDown={(loadingLogin === false) ? this.onKeyDownEnter : this.onKeyDownOther} />
                         {
                             (error === true) ? <p style={{ color: 'red', marginBottom: '20px' }}>*Invalid username or password!!!</p> : ''
                         }
@@ -74,7 +77,7 @@ class LoginPage extends React.Component {
                                 <Button className='btn-submit' onClick={this.login}>Sign In</Button> :
                                 <Button className='btn-submit' disabled><CircularProgress className='cuicular-progress' size={23} /></Button>
                         }
-                    </div>
+                    </form>
                 </div>
                 <img className='background-01' src={backgroundOne} alt='backgroun-1'></img>
                 <img className='background-02' src={backgroundTwo} alt='backgroun-2'></img>

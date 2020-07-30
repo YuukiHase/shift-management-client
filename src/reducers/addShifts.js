@@ -1,5 +1,5 @@
-import * as types from '../constants/ActionTypes';
-import { formatDate, formatTime } from '../utils/utils';
+import * as types from 'constants/ActionTypes';
+import { formatDate, formatTime } from 'utils/utils';
 
 let initialState = {
     selectedDate: new Date(),

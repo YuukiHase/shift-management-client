@@ -3,10 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { styles } from './styles';
 import { TextField, MenuItem } from '@material-ui/core';
-import { ages } from '../../../../../../constants/Ages';
-import { roles } from '../../../../../../constants/Roles';
-import { sexs } from '../../../../../../constants/Sexs';
-import { weights } from '../../../../../../constants/Weights';
+import { ages } from 'constants/Ages';
+import { roles } from 'constants/Roles';
+import { sexs } from 'constants/Sexs';
+import { weights } from 'constants/Weights';
 import {
     actChangeNameOnAddStaff,
     actChangeEmailOnAddStaff,
@@ -17,7 +17,7 @@ import {
     actChangeUsernameOnAddStaff,
     actChangePasswordOnAddStaff,
     actChangeWeightOnAddStaff
-} from '../../../../../../actions';
+} from 'actions';
 
 const useStyle = makeStyles(styles);
 

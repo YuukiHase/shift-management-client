@@ -18,9 +18,9 @@ import {
     actGetSalary,
     actAddStaffSuccess,
     actLoadingModal
-} from '../../../../actions';
+} from 'actions';
 import StaffsTablePaginationActions from './StaffsTablePaginationActions';
-import * as callAPI from '../../../../utils/callAPI';
+import * as callAPI from 'utils/callAPI';
 import AddStaff from './AddStaff';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
@@ -30,8 +30,8 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import { compareDate, formatDate } from '../../../../utils/utils';
-import { DOMAIN } from '../../../../constants/DomainAPI';
+import { compareDate, formatDate } from 'utils/utils';
+import { DOMAIN } from 'constants/DomainAPI';
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;

@@ -12,11 +12,11 @@ import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import TabContainer from '../../../../TabContainer';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AddStaffBody from './AddStaffBody';
 import AddStaffFooter from './AddStaffFooter';
-import { actChangeOpenOnAddStaff } from '../../../../../actions';
+import { actChangeOpenOnAddStaff } from 'actions';
+import TabContainer from 'components/TabContainer';
 
 const useStyles = makeStyles(styles);
 

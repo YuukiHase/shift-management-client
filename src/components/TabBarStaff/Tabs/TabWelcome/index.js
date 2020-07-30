@@ -12,7 +12,7 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import { actSelectDateOnWelcome, actGetShiftsOnWelcome, actSelectShiftOnWelcome } from '../../../../actions';
+import { actSelectDateOnWelcome, actGetShiftsOnWelcome, actSelectShiftOnWelcome } from 'actions';
 
 const useStyle = makeStyles(styles);
 

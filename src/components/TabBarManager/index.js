@@ -7,14 +7,14 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { styles } from './styles';
-import TabContainer from '../TabContainer';
 import TabManageShift from './Tabs/TabManageShift';
 import IconButton from '@material-ui/core/IconButton';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import auth from '../../auth';
+import auth from 'auth';
 import { Link } from 'react-router-dom';
+import TabContainer from 'components/TabContainer';
 import TabManageStaff from './Tabs/TabManageStaff';
-import { actLogout } from '../../actions';
+import { actLogout } from 'actions';
 import { connect } from 'react-redux';
 import { Modal, CircularProgress } from '@material-ui/core';
 

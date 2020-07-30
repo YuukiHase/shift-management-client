@@ -5,8 +5,8 @@ import { styles } from './styles';
 import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
-import { timeToNumber } from '../../../../../../utils/utils';
-import { actCreateShifts, actChangeOpenControlAdd, actOpenSnackBarOnAddShift, actChangeErrorMessageOnAddShift } from '../../../../../../actions';
+import { timeToNumber } from 'utils/utils';
+import { actCreateShifts, actChangeOpenControlAdd, actOpenSnackBarOnAddShift, actChangeErrorMessageOnAddShift } from 'actions';
 import { Chip } from '@material-ui/core';
 
 const useStyles = makeStyles(styles);

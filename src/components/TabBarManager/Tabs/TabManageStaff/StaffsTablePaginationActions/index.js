@@ -10,9 +10,9 @@ import TableFooter from '@material-ui/core/TableFooter';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import TablePaginationActions from '../../../../TablePaginationActions';
 import Typography from '@material-ui/core/Typography';
-import { formatCurrency } from '../../../../../utils/utils';
+import { formatCurrency } from 'utils/utils';
+import TablePaginationActions from 'components/TablePaginationActions';
 
 const useStyles = makeStyles(styles);
 

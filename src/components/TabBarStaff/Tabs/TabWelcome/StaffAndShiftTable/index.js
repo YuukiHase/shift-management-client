@@ -10,10 +10,10 @@ import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import * as callAPI from '../../../../../utils/callAPI';
-import { formatCurrency } from '../../../../../utils/utils';
-import { actLoadListStaffsOnShiftOnWelcome, actLoadingModal } from '../../../../../actions';
-import { DOMAIN } from '../../../../../constants/DomainAPI';
+import * as callAPI from 'utils/callAPI';
+import { formatCurrency } from 'utils/utils';
+import { actLoadListStaffsOnShiftOnWelcome, actLoadingModal } from 'actions';
+import { DOMAIN } from 'constants/DomainAPI';
 
 const useStyles = makeStyles(styles);
 

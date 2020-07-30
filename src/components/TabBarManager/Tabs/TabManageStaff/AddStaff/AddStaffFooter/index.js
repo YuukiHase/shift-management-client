@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { styles } from './styles';
 import Button from '@material-ui/core/Button';
-import * as validator from '../../../../../../utils/validator';
+import * as validator from 'utils/validator';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import {
@@ -11,7 +11,7 @@ import {
     actCreateStaff,
     actChangeOpenOnAddStaff,
     actChangeOpenSnackBarOnAddStaff
-} from '../../../../../../actions';
+} from 'actions';
 
 const useStyles = makeStyles(styles);
 

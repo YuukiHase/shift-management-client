@@ -9,7 +9,14 @@ import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
-import { actChangeSearchValueOnShift, actSearchStaffOnShift, actSelectDate, actSelectShift, actGetShiftsOnDate, actAddShiftSuccess } from '../../../../actions';
+import {
+    actChangeSearchValueOnShift,
+    actSearchStaffOnShift,
+    actSelectDate,
+    actSelectShift,
+    actGetShiftsOnDate,
+    actAddShiftSuccess
+} from 'actions';
 import { DatePicker } from '@material-ui/pickers';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
