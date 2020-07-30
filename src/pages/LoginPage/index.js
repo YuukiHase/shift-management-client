@@ -24,30 +24,30 @@ class LoginPage extends React.Component {
         this.setState({
             username: event.target.value
         })
-    }
+    };
 
     onChangePassword = (event) => {
         this.setState({
             password: event.target.value
         })
-    }
+    };
 
     login = () => {
         const { username, password } = this.state;
         this.props.onLogin(username, password);
-    }
+    };
 
     onKeyDown = (event) => {
         if (event.keyCode === 13) {
             this.login();
         }
-    }
+    };
 
     componentDidMount() {
         if (auth.isAuthenticated === true) {
             this.props.onLoginSuccess();
         }
-    }
+    };
 
     render() {
         const { classes, redirectToReferrer, error, loadingLogin } = this.props;
@@ -85,8 +85,11 @@ class LoginPage extends React.Component {
 
 LoginPage.propTypes = {
     classes: PropTypes.object,
+    error: PropTypes.bool,
     redirectToReferrer: PropTypes.bool,
-    loadingLogin: PropTypes.bool
+    loadingLogin: PropTypes.bool,
+    onLogin: PropTypes.func,
+    onLoginSuccess: PropTypes.func
 }
 
 export default connect(

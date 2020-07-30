@@ -28,7 +28,7 @@ export default function AddShiftFooter(props) {
 
     const onCloseModal = () => {
         dispatch(actChangeOpenControlAdd(false));
-    }
+    };
 
     const handleCloseSnackBar = (event, reason) => {
         if (reason === 'clickaway') {

@@ -3,7 +3,12 @@ import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 
 TabContainer.propTypes = {
-    style: PropTypes.object
+    style: PropTypes.object,
+    className: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
+    ]),
+    children: PropTypes.element
 }
 
 export default function TabContainer(props) {

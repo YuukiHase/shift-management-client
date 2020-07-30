@@ -29,11 +29,11 @@ export default function ControlAdd(props) {
 
     const handleOpen = () => {
         dispatch(actChangeOpenControlAdd(true));
-    }
+    };
 
     const handleClose = () => {
         dispatch(actChangeOpenControlAdd(false));
-    }
+    };
 
     const handleChange = (event, value) => {
         dispatch(actChangeControlAddValue(value));

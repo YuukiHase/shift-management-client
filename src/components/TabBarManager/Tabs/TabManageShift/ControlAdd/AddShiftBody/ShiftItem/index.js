@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { styles } from './styles';
@@ -14,33 +15,20 @@ import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Slider from '@material-ui/core/Slider';
 import Box from '@material-ui/core/Box';
-import InputLabel from '@material-ui/core/InputLabel'
-import * as actions from '../../../../../../../actions'
+import InputLabel from '@material-ui/core/InputLabel';
+import {
+    actChangeBonusRateOnAddShift,
+    actChangeSlotOnAddShift,
+    actChangeStartTimeOnAddShift,
+    actChangeFinishTimeOnAddShift
+} from '../../../../../../../actions';
+import { bonusRates } from '../../../../../../../constants/BonusRate';
+
+ShiftItem.propTypes = {
+    index: PropTypes.number
+}
 
 const useStyles = makeStyles(styles);
-
-const bonusRates = [
-    {
-        value: 1,
-        label: '1',
-    },
-    {
-        value: 1.5,
-        label: '1.5',
-    },
-    {
-        value: 2,
-        label: '2',
-    },
-    {
-        value: 2.5,
-        label: '2.5',
-    },
-    {
-        value: 3,
-        label: '3',
-    },
-];
 
 export default function ShiftItem(props) {
     const classes = useStyles();
@@ -58,30 +46,30 @@ export default function ShiftItem(props) {
     };
 
     const handleBonusRateChange = (event) => {
-        dispatch(actions.actChangeBonusRateOnAddShift(event.target.value, props.index));
+        dispatch(actChangeBonusRateOnAddShift(event.target.value, props.index));
     };
 
     const handleSlotChange = (event, newValue) => {
-        dispatch(actions.actChangeSlotOnAddShift(newValue, props.index));
+        dispatch(actChangeSlotOnAddShift(newValue, props.index));
     };
 
     const onChangeStartTime = (time) => {
         setStartTime(time);
-        dispatch(actions.actChangeStartTimeOnAddShift(time, props.index));
+        dispatch(actChangeStartTimeOnAddShift(time, props.index));
     };
 
     const onChangeFinishTime = (time) => {
         setFinishTime(time);
-        dispatch(actions.actChangeFinishTimeOnAddShift(time, props.index));
+        dispatch(actChangeFinishTimeOnAddShift(time, props.index));
     };
 
     useEffect(() => {
         setStartTime(new Date(`Thu Mar 12 1998 ${start} GMT+0700`));
-    }, [start])
+    }, [start]);
 
     useEffect(() => {
         setFinishTime(new Date(`Thu Mar 12 1998 ${finish} GMT+0700`));
-    }, [finish])
+    }, [finish]);
 
     return (
         <Card className={classes.root}>

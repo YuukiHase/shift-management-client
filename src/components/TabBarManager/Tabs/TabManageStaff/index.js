@@ -56,25 +56,25 @@ export default function TabManageStaff(props) {
         let target = event.target;
         let value = target.value;
         dispatch(actChangeSearchValueOnManageStaff(value));
-    }
+    };
 
     const onKeyDown = (event) => {
         if (event.keyCode === 13) {
             dispatch(actSearchStaffOnManageStaff(keyword));
         }
-    }
+    };
 
     const onSearchStaff = () => {
         dispatch(actSearchStaffOnManageStaff(keyword));
-    }
+    };
 
     const handleStartDateChange = (selectedDate) => {
         dispatch(actChangeStartDateOnStaffs(selectedDate));
-    }
+    };
 
     const handleEndDateChange = (selectedDate) => {
         dispatch(actChangeEndDateOnStaffs(selectedDate));
-    }
+    };
 
     const getSalary = () => {
         if (compareDate(formatDate(selectedStartDate), formatDate(selectedEndDate)) === true) {
@@ -88,7 +88,7 @@ export default function TabManageStaff(props) {
             setAlertContent('Do you want to get salary?');
             setOpenAlert(true);
         }
-    }
+    };
 
     const handleCloseSnackBar = (event, reason) => {
         if (reason === 'clickaway') {
@@ -99,13 +99,13 @@ export default function TabManageStaff(props) {
 
     const handleCloseAlert = () => {
         setOpenAlert(false);
-    }
+    };
 
     const handleAgreeAlert = () => {
         // Get salary.
         dispatch(actGetSalary(selectedStartDate, selectedEndDate, staffs));
         setOpenAlert(false);
-    }
+    };
 
     useEffect(() => {
         // Turn on loading modal.

@@ -25,7 +25,7 @@ export default function TabManageShift(props) {
 
     const handleDateChange = (selectedDate) => {
         dispatch(actSelectDateOnWelcome(selectedDate));
-    }
+    };
 
     const handleShiftChange = (event) => {
         let target = event.target;

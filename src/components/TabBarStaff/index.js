@@ -70,7 +70,9 @@ class TabBarManager extends React.Component {
 }
 
 TabBarManager.propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
+    loadingModal: PropTypes.bool,
+    onLogout: PropTypes.func
 }
 
 export default connect(

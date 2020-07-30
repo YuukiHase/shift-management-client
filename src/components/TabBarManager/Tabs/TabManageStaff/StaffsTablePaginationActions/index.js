@@ -16,7 +16,7 @@ import { formatCurrency } from '../../../../../utils/utils';
 
 const useStyles = makeStyles(styles);
 
-export default function StaffsTablePaginationActions() {
+export default function StaffsTablePaginationActions(props) {
     const classes = useStyles();
     let rows = useSelector(state => state.staffs.staffs);
     const keyword = useSelector(state => state.staffs.keyword);
@@ -34,7 +34,7 @@ export default function StaffsTablePaginationActions() {
 
     rows = rows.filter((row) => {
         return row.role !== 'MANAGER';
-    })
+    });
 
     // Search if have keyword.
     if (keyword) {

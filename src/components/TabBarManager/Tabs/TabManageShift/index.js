@@ -9,7 +9,7 @@ import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
-import * as actions from '../../../../actions';
+import { actChangeSearchValueOnShift, actSearchStaffOnShift, actSelectDate, actSelectShift, actGetShiftsOnDate, actAddShiftSuccess } from '../../../../actions';
 import { DatePicker } from '@material-ui/pickers';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -37,38 +37,38 @@ export default function TabManageShift(props) {
     const onChange = (event) => {
         let target = event.target;
         let value = target.value;
-        dispatch(actions.actChangeSearchValueOnShift(value));
+        dispatch(actChangeSearchValueOnShift(value));
     };
 
     const onKeyDown = (event) => {
         if (event.keyCode === 13) {
-            dispatch(actions.actSearchStaffOnShift(keyword));
+            dispatch(actSearchStaffOnShift(keyword));
         }
     };
 
     const handleDateChange = (selectedDate) => {
         // Reset search value and keyword.
-        dispatch(actions.actChangeSearchValueOnShift(''));
-        dispatch(actions.actSearchStaffOnShift(''));
+        dispatch(actChangeSearchValueOnShift(''));
+        dispatch(actSearchStaffOnShift(''));
         // Call action Select date on action.
-        dispatch(actions.actSelectDate(selectedDate));
+        dispatch(actSelectDate(selectedDate));
     };
 
     const onSearchStaff = () => {
-        dispatch(actions.actSearchStaffOnShift(keyword));
+        dispatch(actSearchStaffOnShift(keyword));
     };
 
     const handleShiftChange = (event) => {
         // Reset search value and keyword.
-        dispatch(actions.actChangeSearchValueOnShift(''));
-        dispatch(actions.actSearchStaffOnShift(''));
+        dispatch(actChangeSearchValueOnShift(''));
+        dispatch(actSearchStaffOnShift(''));
         let target = event.target;
         let value = target.value;
-        dispatch(actions.actSelectShift(value));
+        dispatch(actSelectShift(value));
     };
 
     useEffect(() => {
-        dispatch(actions.actGetShiftsOnDate(selectedDate));
+        dispatch(actGetShiftsOnDate(selectedDate));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -76,7 +76,7 @@ export default function TabManageShift(props) {
         if (reason === 'clickaway') {
             return;
         }
-        dispatch(actions.actAddShiftSuccess(false));
+        dispatch(actAddShiftSuccess(false));
     };
 
     const elementShiftMenuItem = shiftsOnDate.length > 0

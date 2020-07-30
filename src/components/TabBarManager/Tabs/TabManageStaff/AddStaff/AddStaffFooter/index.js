@@ -157,7 +157,7 @@ export default function AddStaffFooter(props) {
             }
             dispatch(actCreateStaff(newStaff));
         }
-    }
+    };
 
     return (
         <div className={classes.root}>

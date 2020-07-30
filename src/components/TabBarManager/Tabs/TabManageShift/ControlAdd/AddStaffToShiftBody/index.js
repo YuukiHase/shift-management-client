@@ -52,7 +52,7 @@ export default function AddStaffToShiftBody(props) {
     const handleAgree = () => {
         dispatch(actAgreeAddStaffToShift(selectedStaff, selectedShift));
         setOpen(false);
-    }
+    };
 
     useEffect(() => {
         // Turn on loading modal.

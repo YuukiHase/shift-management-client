@@ -3,32 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { styles } from './styles';
 import { TextField, MenuItem } from '@material-ui/core';
-import * as actions from '../../../../../../../actions';
+import { actChangeAmountShiftOnAddShift } from '../../../../../../../actions';
+import { amountShifts } from '../../../../../../../constants/AmountShifts';
 
 const useStyles = makeStyles(styles);
-
-const amountShifts = [
-    {
-        value: 1,
-        label: '1',
-    },
-    {
-        value: 2,
-        label: '2',
-    },
-    {
-        value: 3,
-        label: '3',
-    },
-    {
-        value: 4,
-        label: '4',
-    },
-    {
-        value: 5,
-        label: '5',
-    },
-];
 
 export default function AmountShift(props) {
     const classes = useStyles();
@@ -36,7 +14,7 @@ export default function AmountShift(props) {
     const dispatch = useDispatch();
 
     const handleChange = (event) => {
-        dispatch(actions.actChangeAmountShiftOnAddShift(event.target.value));
+        dispatch(actChangeAmountShiftOnAddShift(event.target.value));
     };
 
     return (

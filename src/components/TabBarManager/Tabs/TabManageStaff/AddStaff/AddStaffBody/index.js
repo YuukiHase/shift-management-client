@@ -37,7 +37,7 @@ export default function AddStaffBody(props) {
 
     const handleChangeName = (event) => {
         dispatch(actChangeNameOnAddStaff(event.target.value));
-    }
+    };
 
     const handleChangeAge = (event) => {
         dispatch(actChangeAgeOnAddStaff(event.target.value));

@@ -13,7 +13,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import TablePaginationActions from '../../../../TablePaginationActions';
 import Typography from '@material-ui/core/Typography';
-import * as actions from '../../../../../actions';
+import { actTakeAttendance, actLoadingModal, actLoadListStaffsOnShift } from '../../../../../actions';
 import * as callAPI from '../../../../../utils/callAPI';
 import Button from '@material-ui/core/Button';
 import CheckIcon from '@material-ui/icons/Check';
@@ -45,27 +45,27 @@ export default function StaffsAndShiftsTablePaginationActions(props) {
             // Do nothing.
             console.log('This user already PRESENT.');
         } else {
-            dispatch(actions.actTakeAttendance(staffOnShift, selectedShift));
+            dispatch(actTakeAttendance(staffOnShift, selectedShift));
         }
-    }
+    };
 
     useEffect(() => {
         // -1 mean that there are no shift on date.
         if (selectedShift !== -1) {
             // Turn on loading modal.
-            dispatch(actions.actLoadingModal(true));
+            dispatch(actLoadingModal(true));
             callAPI.GET(`${DOMAIN}api/shift-request/list-user-shift?shiftId=${selectedShift.id}`)
                 .then(res => {
                     if (res.error === false) {
                         // Load list staffs on shift to redux.
-                        dispatch(actions.actLoadListStaffsOnShift(res.data));
+                        dispatch(actLoadListStaffsOnShift(res.data));
                         // Turn off loading modal.
-                        dispatch(actions.actLoadingModal(false));
+                        dispatch(actLoadingModal(false));
                     } else {
                         // Get message if error.
                         console.log(res.data);
                         // Turn off loading modal.
-                        dispatch(actions.actLoadingModal(false));
+                        dispatch(actLoadingModal(false));
                     }
                 })
         }

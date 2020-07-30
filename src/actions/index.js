@@ -9,15 +9,15 @@ export const actLoadingLogin = (loadingLogin) => {
     return {
         type: types.LOADING_LOGIN,
         loadingLogin // loadingLogin: loadingLogin
-    }
-}
+    };
+};
 
 export const actLoadingModal = (loadingModal) => {
     return {
         type: types.LOADING_MODAL,
         loadingModal // loadingModal: loadingModal
-    }
-}
+    };
+};
 
 export const actLogin = (username, password) => {
     return dispatch => {
@@ -64,20 +64,20 @@ export const actLoginError = (error) => {
     return {
         type: types.LOGIN_ERROR,
         error // error: error
-    }
+    };
 };
 
 export const actLoginSuccess = (user) => {
     return {
         type: types.LOGIN,
         user // user: user
-    }
+    };
 };
 
 export const actLogout = () => {
     return {
         type: types.LOGOUT
-    }
+    };
 };
 
 export const actGetShiftsOnDate = (selectedDate) => {
@@ -107,63 +107,63 @@ export const actGetShiftsOnDate = (selectedDate) => {
                     dispatch(actLoadingModal(false));
                 }
             });
-    }
-}
+    };
+};
 
 export const actLoadListAllStaff = (listStaff) => {
     return {
         type: types.LOAD_LIST_ALL_STAFF,
         listStaff // listStaff: listStaff
-    }
+    };
 };
 
 export const actLoadListStaffsOnShift = (listStaffsOnShift) => {
     return {
         type: types.LOAD_LIST_STAFFS_ON_SHIFT,
         listStaffsOnShift // listStaffsOnShift: listStaffsOnShift
-    }
+    };
 };
 
 export const actSearchStaffOnShift = (keyword) => {
     return {
         type: types.SEARCH_STAFF_ON_SHIFT,
         keyword // keyword: keyword
-    }
+    };
 };
 
 export const actChangeSearchValueOnShift = (searchValue) => {
     return {
         type: types.CHANGE_SEARCH_VALUE_ON_SHIFT,
         searchValue // searchValue: searchValue
-    }
+    };
 };
 
 export const actSelectShift = (selectedShift) => {
     return {
         type: types.SELECTED_SHIFT,
         selectedShift // selectedShift: selectedShift
-    }
+    };
 };
 
 export const actSelectDate = (selectedDate) => {
     return dispatch => {
         dispatch(actSelectedDate(selectedDate));
         dispatch(actGetShiftsOnDate(selectedDate));
-    }
+    };
 };
 
 export const actSelectedDate = (selectedDate) => {
     return {
         type: types.SELECTED_DATE,
         selectedDate // selectedDate: selectedDate
-    }
-}
+    };
+};
 
 export const actLoadListShiftsOnDate = (shiftsOnDate) => {
     return {
         type: types.LOAD_LIST_SHIFT_ON_DATE,
         shiftsOnDate // shiftsOnDate: shiftsOnDate
-    }
+    };
 };
 
 export const actTakeAttendance = (staffOnShift, selectedShift) => {
@@ -198,75 +198,75 @@ export const actSetAttendance = (staffOnShift) => {
     return {
         type: types.TAKE_ATTENDANCE,
         staffOnShift // staffOnShift: staffOnShift
-    }
+    };
 };
 
 export const actSetWages = (staffOnShift) => {
     return {
         type: types.TAKE_WAGES,
         staffOnShift // staffOnShift: staffOnShift
-    }
+    };
 };
 
 export const actChangeAmountShiftOnAddShift = (amountShift) => {
     return {
         type: types.CHANGE_AMOUNT_SHIFT_ON_ADD_SHIFT,
         amountShift // amountShift: amountShift
-    }
-}
+    };
+};
 
 export const actChangeSelectedDateOnAddShift = (selectedDate) => {
     return {
         type: types.CHANGE_SELECTED_DATE_ON_ADD_SHIFT,
         selectedDate // selectedDate: selectedDate
-    }
-}
+    };
+};
 
 export const actChangeBonusRateOnAddShift = (bonusRate, index) => {
     return {
         type: types.CHANGE_BONUS_RATE_ON_ADD_SHIFT,
         bonusRate, // bonusRate: bonusRate
         index // index: index
-    }
-}
+    };
+};
 
 export const actChangeStartTimeOnAddShift = (time, index) => {
     return {
         type: types.CHANGE_START_TIME_ON_ADD_SHIFT,
         time, // time: time
         index // index: index
-    }
-}
+    };
+};
 
 export const actChangeFinishTimeOnAddShift = (time, index) => {
     return {
         type: types.CHANGE_FINISH_TIME_ON_ADD_SHIFT,
         time, // time: time
         index // index: index
-    }
-}
+    };
+};
 
 export const actChangeSlotOnAddShift = (slot, index) => {
     return {
         type: types.CHANGE_SLOT_ON_ADD_SHIFT,
         slot, // slot: slot
         index // index: index
-    }
-}
+    };
+};
 
 export const actOpenSnackBarOnAddShift = (openSnackBar) => {
     return {
         type: types.CHANGE_ADD_OPEN_SNACKBAR_ON_ADD_SHIFT,
         openSnackBar // openSnackBar: openSnackBar
-    }
-}
+    };
+};
 
 export const actChangeErrorMessageOnAddShift = (errorMessage) => {
     return {
         type: types.CHANGE_ERROR_MESSAGE_ON_ADD_SHIFT,
         errorMessage // errorMessage: errorMessage
-    }
-}
+    };
+};
 
 export const actCreateShifts = (newShifts, selectedDateOnManangeShift, selectedDateOnCreateShift) => {
     return dispatch => {
@@ -292,50 +292,50 @@ export const actCreateShifts = (newShifts, selectedDateOnManangeShift, selectedD
                     dispatch(actOpenSnackBarOnAddShift(true));
                 }
             });
-    }
-}
+    };
+};
 
 export const actAddShiftSuccess = (addShiftsSuccess) => {
     return {
         type: types.CHANGE_ADD_SHIFT_SUCCESS_ON_ADD_SHIFT,
         addShiftsSuccess // addShiftsSuccess: addShiftsSuccess
-    }
-}
+    };
+};
 
 export const actSearchStaffOnManageStaff = (keyword) => {
     return {
         type: types.SEARCH_STAFF_ON_MANAGE_STAFF,
         keyword // keyword: keyword
-    }
-}
+    };
+};
 
 export const actChangeSearchValueOnManageStaff = (searchValue) => {
     return {
         type: types.CHANGE_SEARCH_VALUE_ON_MANAGE_STAFF,
         searchValue // searchValue: searchValue
-    }
-}
+    };
+};
 
 export const actChangeOpenControlAdd = (open) => {
     return {
         type: types.CHANGE_OPEN_CONTROL_ADD,
         open // open: open
-    }
-}
+    };
+};
 
 export const actChangeControlAddValue = (value) => {
     return {
         type: types.CONTROL_ADD_VALUE,
         value // value: value
-    }
-}
+    };
+};
 
 export const actLoadListStaffToControlAdd = (listStaff) => {
     return {
         type: types.CONTROL_ADD_LOAD_LIST_STAFF,
         listStaff // listStaff: listStaff
-    }
-}
+    };
+};
 
 export const actAgreeAddStaffToShift = (selectedStaff, selectedShift) => {
     return dispatch => {
@@ -370,99 +370,99 @@ export const actAgreeAddStaffToShift = (selectedStaff, selectedShift) => {
                     dispatch(actLoadingModal(false));
                 }
             });
-    }
-}
+    };
+};
 
 export const actAddStaffToStaffsOnShift = (newStaff) => {
     return {
         type: types.ADD_STAFF_TO_STAFFS_ON_SHIFT,
         newStaff // newStaff: newStaff
-    }
-}
+    };
+};
 
 export const actRemoveStaffInControlAdd = (staff) => {
     return {
         type: types.CONTROL_ADD_REMOVE_STAFF,
         staff // staff: staff
-    }
-}
+    };
+};
 
 export const actChangeOpenOnAddStaff = (open) => {
     return {
         type: types.CHANGE_OPEN_ON_ADD_STAFF,
         open // open: open
-    }
-}
+    };
+};
 
 export const actChangeNameOnAddStaff = (name) => {
     return {
         type: types.CHANGE_NAME_ON_ADD_STAFF,
         name // name: name
-    }
-}
+    };
+};
 
 export const actChangeAgeOnAddStaff = (age) => {
     return {
         type: types.CHANGE_AGE_ON_ADD_STAFF,
         age // age: age
-    }
-}
+    };
+};
 
 export const actChangeEmailOnAddStaff = (email) => {
     return {
         type: types.CHANGE_EMAIL_ON_ADD_STAFF,
         email // email: email
-    }
-}
+    };
+};
 
 export const actChangePhoneNumberOnAddStaff = (phoneNumber) => {
     return {
         type: types.CHANGE_PHONENUMBER_ON_ADD_STAFF,
         phoneNumber // phoneNumber: phoneNumber
-    }
-}
+    };
+};
 
 export const actChangeRoleOnAddStaff = (role) => {
     return {
         type: types.CHANGE_ROLE_ON_ADD_STAFF,
         role // role: role
-    }
-}
+    };
+};
 
 export const actChangeSexOnAddStaff = (sex) => {
     return {
         type: types.CHANGE_SEX_ON_ADD_STAFF,
         sex // sex: sex
-    }
-}
+    };
+};
 
 export const actChangeUsernameOnAddStaff = (username) => {
     return {
         type: types.CHANGE_USERNAME_ON_ADD_STAFF,
         username // username: username
-    }
-}
+    };
+};
 
 export const actChangePasswordOnAddStaff = (password) => {
     return {
         type: types.CHANGE_PASSWORD_ON_ADD_STAFF,
         password // password: password
-    }
-}
+    };
+};
 
 export const actChangeWeightOnAddStaff = (weight) => {
     return {
         type: types.CHANGE_WEIGHT_ON_ADD_STAFF,
         weight // weight: weight
-    }
-}
+    };
+};
 
 export const actChangeErrorsOnAddStaff = (errors) => {
     return {
         type: types.CHANGE_ERRORS_ON_ADD_STAFF,
         errors // errors: errors
-    }
-}
+    };
+};
 
 export const actCreateStaff = (newStaff) => {
     return dispatch => {
@@ -493,56 +493,56 @@ export const actCreateStaff = (newStaff) => {
                         dispatch(actLoadingModal(false));
                     }
                 }
-            })
-    }
-}
+            });
+    };
+};
 
 export const actAddNewStaffToStaffs = (newStaff) => {
     return {
         type: types.ADD_NEW_STAFF_TO_STAFFS,
         newStaff // newStaff: newStaff
-    }
-}
+    };
+};
 
 export const actAddStaffSuccess = (addStaffSuccess) => {
     return {
         type: types.CHANGE_ADD_STAFF_SUCCESS_ON_ADD_STAFF,
         addStaffSuccess // addStaffSuccess: addStaffSuccess
-    }
-}
+    };
+};
 export const actResetFormOnAddStaff = () => {
     return {
         type: types.RESET_FORM_ON_ADD_STAFF
-    }
-}
+    };
+};
 
 export const actChangeOpenSnackBarOnAddStaff = (openSnackBar) => {
     return {
         type: types.CHANGE_OPEN_SNACK_BAR_ON_ADD_STAFF,
         openSnackBar // openSnackBar: openSnackBar
-    }
-}
+    };
+};
 
 export const actChangeMessageSnackBarOnAddStaff = (messageSnackBar) => {
     return {
         type: types.CHANGE_MESSAGE_SNACK_BAR_ON_ADD_STAFF,
         messageSnackBar // messageSnackBar: messageSnackBar
-    }
-}
+    };
+};
 
 export const actChangeStartDateOnStaffs = (selectedStartDate) => {
     return {
         type: types.CHANGE_SELECTED_START_DATE_ON_STAFFS,
         selectedStartDate // selectedStartDate: selectedStartDate
-    }
-}
+    };
+};
 
 export const actChangeEndDateOnStaffs = (selectedEndDate) => {
     return {
         type: types.CHANGE_SELECTED_END_DATE_ON_STAFFS,
         selectedEndDate // selectedEndDate: selectedEndDate
-    }
-}
+    };
+};
 
 export const actGetSalary = (selectedStartDate, selectedEndDate, staffs) => {
     return dispatch => {
@@ -560,29 +560,29 @@ export const actGetSalary = (selectedStartDate, selectedEndDate, staffs) => {
                     // Turn off loading modal.
                     dispatch(actLoadingModal(false));
                 }
-            })
-    }
-}
+            });
+    };
+};
 
 export const actGetSalarySuccess = (staffs) => {
     return dispatch => {
         dispatch(actLoadListAllStaff(staffs));
-    }
-}
+    };
+};
 
 export const actSelectDateOnWelcome = (selectedDate) => {
     return dispatch => {
         dispatch(actSelectedDateOnWelcome(selectedDate));
         dispatch(actGetShiftsOnWelcome(selectedDate));
-    }
-}
+    };
+};
 
 export const actSelectedDateOnWelcome = (selectedDate) => {
     return {
         type: types.SELECTED_DATE_ON_WELCOME,
         selectedDate // selectedDate: selectedDate
-    }
-}
+    };
+};
 
 export const actGetShiftsOnWelcome = (selectedDate) => {
     return dispatch => {
@@ -611,26 +611,26 @@ export const actGetShiftsOnWelcome = (selectedDate) => {
                     }
                 }
             });
-    }
-}
+    };
+};
 
 export const actLoadListShiftsOnDateWelcome = (shiftsOnDate) => {
     return {
         type: types.LOAD_LIST_SHIFT_ON_DATE_ON_WELCOME,
         shiftsOnDate // shiftsOnDate: shiftsOnDate
-    }
+    };
 };
 
 export const actSelectShiftOnWelcome = (selectedShift) => {
     return {
         type: types.SELECTED_SHIFT_ON_WELCOME,
         selectedShift // selectedShift: selectedShift
-    }
+    };
 };
 
 export const actLoadListStaffsOnShiftOnWelcome = (staffsOnShift) => {
     return {
         type: types.LOAD_LIST_STAFFS_ON_SHIFT_ON_WELCOME,
         staffsOnShift // staffsOnShift: staffsOnShift
-    }
+    };
 };

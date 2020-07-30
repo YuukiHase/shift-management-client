@@ -5,7 +5,7 @@ import { styles } from './styles';
 import { DatePicker } from '@material-ui/pickers';
 import ShiftItem from './ShiftItem';
 import AmountShift from './AmountShift';
-import * as actions from '../../../../../../actions';
+import { actChangeSelectedDateOnAddShift, actChangeAmountShiftOnAddShift } from '../../../../../../actions';
 
 const useStyles = makeStyles(styles);
 
@@ -16,14 +16,14 @@ export default function AddShiftBody(props) {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(actions.actChangeSelectedDateOnAddShift(new Date()));
+        dispatch(actChangeSelectedDateOnAddShift(new Date()));
         return () => {
-            dispatch(actions.actChangeAmountShiftOnAddShift(1));
+            dispatch(actChangeAmountShiftOnAddShift(1));
         }
     }, [dispatch]);
 
     const setSelectedDate = (selectedDate) => {
-        dispatch(actions.actChangeSelectedDateOnAddShift(selectedDate));
+        dispatch(actChangeSelectedDateOnAddShift(selectedDate));
     }
 
     return (
